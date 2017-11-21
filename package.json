@@ -1,7 +1,7 @@
 {
   "name": "react-toggle-styled-component",
   "version": "0.0.4",
-  "description": "Styled component version of Arron Shaf's <http://aaronshaf.github.io/react-toggle/>. An elegant, accessible toggle component for React. Also a glorified checkbox.",
+  "description": "Styled components version of Arron Shaf's react-toggle.",
   "main": "dist/component/index.js",
   "style": "src/style.css",
   "scripts": {
