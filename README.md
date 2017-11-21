@@ -50,8 +50,6 @@ You can theme the component by wrapping in a `<ThemeProvider>` and supplying the
 see [styled-components theming](https://www.styled-components.com/docs/advanced#theming) for more details
 
 
-```
-
 ## Development
 
 ```javascript
