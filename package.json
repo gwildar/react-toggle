@@ -1,6 +1,6 @@
 {
-  "name": "react-toggle-styled-components",
-  "version": "0.0.3",
+  "name": "react-toggle-styled-component",
+  "version": "0.0.1",
   "description": "Styled component version of Arron Shaf's <http://aaronshaf.github.io/react-toggle/>. An elegant, accessible toggle component for React. Also a glorified checkbox.",
   "main": "dist/component/index.js",
   "style": "src/style.css",
@@ -59,7 +59,6 @@
     "webpack-dev-server": "^1.16.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
     "styled-components": "^2.2.3"
   },
   "peerDependencies": {
