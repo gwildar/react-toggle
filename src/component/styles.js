@@ -112,13 +112,13 @@ export const Toggle = styled.div`
   -webkit-tap-highlight-color: transparent;
 
   ${ToggleTrack} {
-    background-color: ${props => props.checked ? props.theme.checkedBg : props.theme.notCheckedBg};
+    background-color: ${props => props.checked ? props.theme.reactToggle.checkedBg : props.theme.reactToggle.notCheckedBg};
   }
 
   ${ToggleTrack}:hover {
     background-color: ${props => {
-      if (props.checked && !props.disabled) { return props.theme.checkedBgHover }
-      if (!props.checked && !props.disabled) { return props.theme.notCheckedBgHover }
+      if (props.checked && !props.disabled) { return props.theme.reactToggle.checkedBgHover }
+      if (!props.checked && !props.disabled) { return props.theme.reactToggle.notCheckedBgHover }
     }};
   }
   
@@ -135,19 +135,7 @@ export const Toggle = styled.div`
     -webkit-box-shadow: ${props => props.focus ? '0px 0px 3px 2px #0099E0' : ''};  
     -moz-box-shadow: ${props => props.focus ? '0px 0px 3px 2px #0099E0' : ''};  
     box-shadow: ${props => props.focus ? '0px 0px 3px 2px #0099E0' : ''};  
-    border-color: ${props => props.checked ? props.theme.checkedBorder : props.theme.notCheckedBorder};
-    background-color: ${props => props.theme.thumbBg};
+    border-color: ${props => props.checked ? props.theme.reactToggle.checkedBorder : props.theme.reactToggle.notCheckedBorder};
+    background-color: ${props => props.theme.reactToggle.thumbBg};
   }
 `
-
-Toggle.defaultProps = {
-  theme: {
-    checkedBg: '#19AB27',
-    checkedBgHover: '#128D15',
-    notCheckedBg: '#4D4D4D',
-    notCheckedBgHover: '#000000',
-    checkedBorder: '#19AB27',
-    notCheckedBorder: '#4D4D4D',
-    thumbBg: '#FAFAFA',
-  },
-}

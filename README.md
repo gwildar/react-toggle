@@ -53,14 +53,14 @@ see [styled-components theming](https://www.styled-components.com/docs/advanced#
 ## Development
 
 ```javascript
-npm install
-npm run dev
+yarn
+yarn dev
 ```
 
 ## Build
 
 ```javascript
-npm run build
+yarn build
 ```
 
 ## License
