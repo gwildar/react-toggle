@@ -58,7 +58,7 @@
 	
 	var _component2 = _interopRequireDefault(_component);
 	
-	__webpack_require__(229);
+	__webpack_require__(228);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22349,11 +22349,7 @@
 	
 	var _util = __webpack_require__(189);
 	
-	var _ComponentLibThemeProvider = __webpack_require__(190);
-	
-	var _ComponentLibThemeProvider2 = _interopRequireDefault(_ComponentLibThemeProvider);
-	
-	var _styles = __webpack_require__(228);
+	var _styles = __webpack_require__(190);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22507,46 +22503,42 @@
 	          inputProps = _objectWithoutProperties(_props, ['icons']);
 	
 	      return _react2.default.createElement(
-	        _ComponentLibThemeProvider2.default,
-	        null,
+	        _styles.Toggle,
+	        {
+	          checked: this.state.checked,
+	          focus: this.state.hasFocus,
+	          disabled: this.props.disabled,
+	          onClick: this.handleClick,
+	          onTouchStart: this.handleTouchStart,
+	          onTouchMove: this.handleTouchMove,
+	          onTouchEnd: this.handleTouchEnd },
 	        _react2.default.createElement(
-	          _styles.Toggle,
-	          {
-	            checked: this.state.checked,
-	            focus: this.state.hasFocus,
-	            disabled: this.props.disabled,
-	            onClick: this.handleClick,
-	            onTouchStart: this.handleTouchStart,
-	            onTouchMove: this.handleTouchMove,
-	            onTouchEnd: this.handleTouchEnd },
+	          _styles.ToggleTrack,
+	          null,
 	          _react2.default.createElement(
-	            _styles.ToggleTrack,
+	            _styles.ToggleTrackCheck,
 	            null,
-	            _react2.default.createElement(
-	              _styles.ToggleTrackCheck,
-	              null,
-	              this.getIcon('checked')
-	            ),
-	            _react2.default.createElement(
-	              _styles.ToggleTrackX,
-	              null,
-	              this.getIcon('unchecked')
-	            )
+	            this.getIcon('checked')
 	          ),
-	          _react2.default.createElement(_styles.ToggleThumb, null),
-	          _react2.default.createElement(_styles.ToggleInput, _extends({}, inputProps, {
-	            innerRef: function innerRef(x) {
-	              _this2.input = x;
-	            },
-	            onFocus: function onFocus() {
-	              return _this2.handleFocus();
-	            },
-	            onBlur: function onBlur() {
-	              return _this2.handleBlur();
-	            },
-	            type: 'checkbox'
-	          }))
-	        )
+	          _react2.default.createElement(
+	            _styles.ToggleTrackX,
+	            null,
+	            this.getIcon('unchecked')
+	          )
+	        ),
+	        _react2.default.createElement(_styles.ToggleThumb, null),
+	        _react2.default.createElement(_styles.ToggleInput, _extends({}, inputProps, {
+	          innerRef: function innerRef(x) {
+	            _this2.input = x;
+	          },
+	          onFocus: function onFocus() {
+	            return _this2.handleFocus();
+	          },
+	          onBlur: function onBlur() {
+	            return _this2.handleBlur();
+	          },
+	          type: 'checkbox'
+	        }))
 	      );
 	    }
 	  }]);
@@ -22783,47 +22775,72 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Toggle = exports.ToggleTrackX = exports.ToggleThumb = exports.ToggleTrack = exports.ToggleInput = exports.ToggleTrackCheck = undefined;
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
+	var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  width: 14px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  left: 8px;\n  opacity: 0;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;n\n  transition: opacity 0.25s ease;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n'], ['\n  position: absolute;\n  width: 14px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  left: 8px;\n  opacity: 0;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;n\n  transition: opacity 0.25s ease;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n']),
+	    _templateObject2 = _taggedTemplateLiteral(['\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n'], ['\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n']),
+	    _templateObject3 = _taggedTemplateLiteral(['\n  width: 50px;\n  height: 24px;\n  padding: 0;\n  border-radius: 30px;\n  -webkit-transition: all 0.2s ease;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n'], ['\n  width: 50px;\n  height: 24px;\n  padding: 0;\n  border-radius: 30px;\n  -webkit-transition: all 0.2s ease;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n']),
+	    _templateObject4 = _taggedTemplateLiteral(['\n  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  width: 22px;\n  height: 22px;\n  border: 1px solid #4D4D4D;\n  border-radius: 50%;\n\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n\n  -webkit-transition: all 0.25s ease;\n  -moz-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n'], ['\n  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  width: 22px;\n  height: 22px;\n  border: 1px solid #4D4D4D;\n  border-radius: 50%;\n\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n\n  -webkit-transition: all 0.25s ease;\n  -moz-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n']),
+	    _templateObject5 = _taggedTemplateLiteral(['\n  position: absolute;\n  width: 10px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  right: 10px;\n  opacity: 1;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n'], ['\n  position: absolute;\n  width: 10px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  right: 10px;\n  opacity: 1;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n']),
+	    _templateObject6 = _taggedTemplateLiteral(['\n  touch-action: pan-x;\n\n  display: inline-block;\n  position: relative;\n  cursor: ', ';\n  opacity:  ', ';\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n\n  -webkit-transition: opacity 0.25s;\n  transition: opacity 0.25s;\n\n  margin-right: 8px;\n  vertical-align: middle;\n\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n\n  ', ' {\n    background-color: ', ';\n  }\n\n  ', ':hover {\n    background-color: ', ';\n  }\n  \n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    left: ', '; \n    -webkit-box-shadow: ', ';  \n    -moz-box-shadow: ', ';  \n    box-shadow: ', ';  \n    border-color: ', ';\n    background-color: ', ';\n  }\n'], ['\n  touch-action: pan-x;\n\n  display: inline-block;\n  position: relative;\n  cursor: ', ';\n  opacity:  ', ';\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n\n  -webkit-transition: opacity 0.25s;\n  transition: opacity 0.25s;\n\n  margin-right: 8px;\n  vertical-align: middle;\n\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n\n  ', ' {\n    background-color: ', ';\n  }\n\n  ', ':hover {\n    background-color: ', ';\n  }\n  \n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    left: ', '; \n    -webkit-box-shadow: ', ';  \n    -moz-box-shadow: ', ';  \n    box-shadow: ', ';  \n    border-color: ', ';\n    background-color: ', ';\n  }\n']);
 	
 	var _styledComponents = __webpack_require__(191);
 	
-	var _propTypes = __webpack_require__(185);
-	
-	var _propTypes2 = _interopRequireDefault(_propTypes);
+	var _styledComponents2 = _interopRequireDefault(_styledComponents);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var defaultTheme = {
-	  checkedBg: '#19AB27',
-	  checkedBgHover: '#128D15',
-	  notCheckedBg: '#4D4D4D',
-	  notCheckedBgHover: '#000000',
-	  checkedBorder: '#19AB27',
-	  notCheckedBorder: '#4D4D4D',
-	  thumbBg: '#FAFAFA'
-	};
+	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 	
-	var ComponentLibThemeProvider = function ComponentLibThemeProvider(props) {
-	  var theme = {
-	    reactToggle: Object.assign({}, defaultTheme, props.theme)
-	    // 👆 Merge the default theme with the user-provided theme
-	  };
-	  return _react2.default.createElement(
-	    _styledComponents.ThemeProvider,
-	    { theme: theme },
-	    props.children
-	  );
-	};
+	var ToggleTrackCheck = exports.ToggleTrackCheck = _styledComponents2.default.div(_templateObject);
 	
-	ComponentLibThemeProvider.propTypes = {
-	  children: _propTypes2.default.node,
-	  theme: _propTypes2.default.object
-	};
+	ToggleTrackCheck.displayName = 'ToggleTrackCheck';
 	
-	exports.default = ComponentLibThemeProvider;
+	var ToggleInput = exports.ToggleInput = _styledComponents2.default.input(_templateObject2);
+	
+	ToggleInput.displayName = 'ToggleInput';
+	
+	var ToggleTrack = exports.ToggleTrack = _styledComponents2.default.div(_templateObject3);
+	ToggleTrack.displayName = 'ToggleTrack';
+	
+	var ToggleThumb = exports.ToggleThumb = _styledComponents2.default.div(_templateObject4);
+	
+	ToggleThumb.displayName = 'ToggleThumb';
+	
+	var ToggleTrackX = exports.ToggleTrackX = _styledComponents2.default.div(_templateObject5);
+	
+	ToggleTrackX.displayName = 'ToggleTrackX';
+	
+	var Toggle = exports.Toggle = _styledComponents2.default.div(_templateObject6, function (props) {
+	  return props.disabled ? 'not-allowed' : 'pointer';
+	}, function (props) {
+	  return props.disabled ? '0.5' : '1';
+	}, ToggleTrack, function (props) {
+	  return props.checked ? props.theme.reactToggle.checkedBg : props.theme.reactToggle.notCheckedBg;
+	}, ToggleTrack, function (props) {
+	  if (props.checked && !props.disabled) {
+	    return props.theme.reactToggle.checkedBgHover;
+	  }
+	  if (!props.checked && !props.disabled) {
+	    return props.theme.reactToggle.notCheckedBgHover;
+	  }
+	}, ToggleTrackCheck, function (props) {
+	  return props.checked ? '1' : '0';
+	}, ToggleTrackX, function (props) {
+	  return props.checked ? '0' : '1';
+	}, ToggleThumb, function (props) {
+	  return props.checked ? '27px' : '1px';
+	}, function (props) {
+	  return props.focus ? '0px 0px 3px 2px #0099E0' : '';
+	}, function (props) {
+	  return props.focus ? '0px 0px 3px 2px #0099E0' : '';
+	}, function (props) {
+	  return props.focus ? '0px 0px 3px 2px #0099E0' : '';
+	}, function (props) {
+	  return props.checked ? props.theme.reactToggle.checkedBorder : props.theme.reactToggle.notCheckedBorder;
+	}, function (props) {
+	  return props.theme.reactToggle.thumbBg;
+	});
 
 /***/ }),
 /* 191 */
@@ -27341,89 +27358,13 @@
 /* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.Toggle = exports.ToggleTrackX = exports.ToggleThumb = exports.ToggleTrack = exports.ToggleInput = exports.ToggleTrackCheck = undefined;
-	
-	var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  width: 14px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  left: 8px;\n  opacity: 0;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;n\n  transition: opacity 0.25s ease;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n'], ['\n  position: absolute;\n  width: 14px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  left: 8px;\n  opacity: 0;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;n\n  transition: opacity 0.25s ease;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n']),
-	    _templateObject2 = _taggedTemplateLiteral(['\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n'], ['\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n']),
-	    _templateObject3 = _taggedTemplateLiteral(['\n  width: 50px;\n  height: 24px;\n  padding: 0;\n  border-radius: 30px;\n  -webkit-transition: all 0.2s ease;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n'], ['\n  width: 50px;\n  height: 24px;\n  padding: 0;\n  border-radius: 30px;\n  -webkit-transition: all 0.2s ease;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n']),
-	    _templateObject4 = _taggedTemplateLiteral(['\n  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  width: 22px;\n  height: 22px;\n  border: 1px solid #4D4D4D;\n  border-radius: 50%;\n\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n\n  -webkit-transition: all 0.25s ease;\n  -moz-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n'], ['\n  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  width: 22px;\n  height: 22px;\n  border: 1px solid #4D4D4D;\n  border-radius: 50%;\n\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n\n  -webkit-transition: all 0.25s ease;\n  -moz-transition: all 0.25s ease;\n  transition: all 0.25s ease;\n']),
-	    _templateObject5 = _taggedTemplateLiteral(['\n  position: absolute;\n  width: 10px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  right: 10px;\n  opacity: 1;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n'], ['\n  position: absolute;\n  width: 10px;\n  height: 10px;\n  top: 0px;\n  bottom: 0px;\n  margin-top: auto;\n  margin-bottom: auto;\n  line-height: 0;\n  right: 10px;\n  opacity: 1;\n  -webkit-transition: opacity 0.25s ease;\n  -moz-transition: opacity 0.25s ease;\n  transition: opacity 0.25s ease;\n']),
-	    _templateObject6 = _taggedTemplateLiteral(['\n  touch-action: pan-x;\n\n  display: inline-block;\n  position: relative;\n  cursor: ', ';\n  opacity:  ', ';\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n\n  -webkit-transition: opacity 0.25s;\n  transition: opacity 0.25s;\n\n  margin-right: 8px;\n  vertical-align: middle;\n\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n\n  ', ' {\n    background-color: ', ';\n  }\n\n  ', ':hover {\n    background-color: ', ';\n  }\n  \n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    left: ', '; \n    -webkit-box-shadow: ', ';  \n    -moz-box-shadow: ', ';  \n    box-shadow: ', ';  \n    border-color: ', ';\n    background-color: ', ';\n  }\n'], ['\n  touch-action: pan-x;\n\n  display: inline-block;\n  position: relative;\n  cursor: ', ';\n  opacity:  ', ';\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n\n  -webkit-transition: opacity 0.25s;\n  transition: opacity 0.25s;\n\n  margin-right: 8px;\n  vertical-align: middle;\n\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n\n  ', ' {\n    background-color: ', ';\n  }\n\n  ', ':hover {\n    background-color: ', ';\n  }\n  \n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    opacity: ', ';\n  }\n\n  ', ' {\n    left: ', '; \n    -webkit-box-shadow: ', ';  \n    -moz-box-shadow: ', ';  \n    box-shadow: ', ';  \n    border-color: ', ';\n    background-color: ', ';\n  }\n']);
-	
-	var _styledComponents = __webpack_require__(191);
-	
-	var _styledComponents2 = _interopRequireDefault(_styledComponents);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-	
-	var ToggleTrackCheck = exports.ToggleTrackCheck = _styledComponents2.default.div(_templateObject);
-	
-	ToggleTrackCheck.displayName = 'ToggleTrackCheck';
-	
-	var ToggleInput = exports.ToggleInput = _styledComponents2.default.input(_templateObject2);
-	
-	ToggleInput.displayName = 'ToggleInput';
-	
-	var ToggleTrack = exports.ToggleTrack = _styledComponents2.default.div(_templateObject3);
-	ToggleTrack.displayName = 'ToggleTrack';
-	
-	var ToggleThumb = exports.ToggleThumb = _styledComponents2.default.div(_templateObject4);
-	
-	ToggleThumb.displayName = 'ToggleThumb';
-	
-	var ToggleTrackX = exports.ToggleTrackX = _styledComponents2.default.div(_templateObject5);
-	
-	ToggleTrackX.displayName = 'ToggleTrackX';
-	
-	var Toggle = exports.Toggle = _styledComponents2.default.div(_templateObject6, function (props) {
-	  return props.disabled ? 'not-allowed' : 'pointer';
-	}, function (props) {
-	  return props.disabled ? '0.5' : '1';
-	}, ToggleTrack, function (props) {
-	  return props.checked ? props.theme.reactToggle.checkedBg : props.theme.reactToggle.notCheckedBg;
-	}, ToggleTrack, function (props) {
-	  if (props.checked && !props.disabled) {
-	    return props.theme.reactToggle.checkedBgHover;
-	  }
-	  if (!props.checked && !props.disabled) {
-	    return props.theme.reactToggle.notCheckedBgHover;
-	  }
-	}, ToggleTrackCheck, function (props) {
-	  return props.checked ? '1' : '0';
-	}, ToggleTrackX, function (props) {
-	  return props.checked ? '0' : '1';
-	}, ToggleThumb, function (props) {
-	  return props.checked ? '27px' : '1px';
-	}, function (props) {
-	  return props.focus ? '0px 0px 3px 2px #0099E0' : '';
-	}, function (props) {
-	  return props.focus ? '0px 0px 3px 2px #0099E0' : '';
-	}, function (props) {
-	  return props.focus ? '0px 0px 3px 2px #0099E0' : '';
-	}, function (props) {
-	  return props.checked ? props.theme.reactToggle.checkedBorder : props.theme.reactToggle.notCheckedBorder;
-	}, function (props) {
-	  return props.theme.reactToggle.thumbBg;
-	});
-
-/***/ }),
-/* 229 */
-/***/ (function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(230);
+	var content = __webpack_require__(229);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(232)(content, {});
+	var update = __webpack_require__(231)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -27440,10 +27381,10 @@
 	}
 
 /***/ }),
-/* 230 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(231)();
+	exports = module.exports = __webpack_require__(230)();
 	// imports
 	
 	
@@ -27454,7 +27395,7 @@
 
 
 /***/ }),
-/* 231 */
+/* 230 */
 /***/ (function(module, exports) {
 
 	/*
@@ -27510,7 +27451,7 @@
 
 
 /***/ }),
-/* 232 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
