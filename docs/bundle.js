@@ -22367,24 +22367,27 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.theme = exports.ThemeProvider = undefined;
+	exports.ToggleThumb = exports.ToggleTrackX = exports.ToggleInput = exports.ToggleTrackCheck = exports.ToggleTrack = exports.StyledToggle = exports.ThemeProvider = undefined;
 	
 	var _Toggle = __webpack_require__(185);
 	
 	var _Toggle2 = _interopRequireDefault(_Toggle);
 	
-	var _theme = __webpack_require__(229);
-	
-	var _theme2 = _interopRequireDefault(_theme);
-	
 	var _ThemeProvider = __webpack_require__(230);
 	
 	var _ThemeProvider2 = _interopRequireDefault(_ThemeProvider);
 	
+	var _styles = __webpack_require__(191);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.ThemeProvider = _ThemeProvider2.default;
-	exports.theme = _theme2.default;
+	exports.StyledToggle = _styles.Toggle;
+	exports.ToggleTrack = _styles.ToggleTrack;
+	exports.ToggleTrackCheck = _styles.ToggleTrackCheck;
+	exports.ToggleInput = _styles.ToggleInput;
+	exports.ToggleTrackX = _styles.ToggleTrackX;
+	exports.ToggleThumb = _styles.ToggleThumb;
 	exports.default = _Toggle2.default;
 
 /***/ }),
