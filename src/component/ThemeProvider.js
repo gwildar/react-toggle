@@ -15,7 +15,6 @@ const defaultTheme = {
 const ComponentLibThemeProvider = (props) => {
   const theme = {
     reactToggle: Object.assign({}, defaultTheme, props.theme),
-    // 👆 Merge the default theme with the user-provided theme
   }
   return (
     <ThemeProvider theme={theme}>
