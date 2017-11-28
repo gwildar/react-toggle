@@ -1,6 +1,6 @@
 {
   "name": "react-toggle-styled-component",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Styled components version of Arron Shaf's react-toggle.",
   "main": "dist/component/index.js",
   "style": "src/style.css",
