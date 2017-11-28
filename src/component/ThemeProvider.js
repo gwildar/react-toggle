@@ -1,31 +1,22 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider as DefaultThemeProvider } from 'styled-components'
 import PropTypes from 'prop-types'
+import { theme as defaultTheme } from './theme'
 
-const defaultTheme = {
-  checkedBg: '#19AB27',
-  checkedBgHover: '#128D15',
-  notCheckedBg: '#4D4D4D',
-  notCheckedBgHover: '#000000',
-  checkedBorder: '#19AB27',
-  notCheckedBorder: '#4D4D4D',
-  thumbBg: '#FAFAFA',
-}
-
-const ComponentLibThemeProvider = (props) => {
+const ThemeProvider = (props) => {
   const theme = {
     reactToggle: Object.assign({}, defaultTheme, props.theme),
   }
   return (
-    <ThemeProvider theme={theme}>
+    <DefaultThemeProvider theme={theme}>
       {props.children}
-    </ThemeProvider>
+    </DefaultThemeProvider>
   )
 }
 
-ComponentLibThemeProvider.propTypes = {
+ThemeProvider.propTypes = {
   children: PropTypes.node,
   theme: PropTypes.object,
 }
 
-export default ComponentLibThemeProvider
+export default ThemeProvider

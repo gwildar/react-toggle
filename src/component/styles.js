@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import theme from './theme'
+
 export const ToggleTrackCheck = styled.div`
   position: absolute;
   width: 14px;
@@ -139,3 +141,9 @@ export const Toggle = styled.div`
     background-color: ${props => props.theme.reactToggle.thumbBg};
   }
 `
+
+Toggle.defaultProps = {
+  theme: {
+    reactToggle: theme,
+  },
+}

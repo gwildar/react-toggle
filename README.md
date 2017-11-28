@@ -33,17 +33,19 @@ yarn react-toggle
 
 ## Usage
 
-You can theme the component by wrapping in a `<ThemeProvider>` and supplying the following theme: 
+You can theme the component by wrapping in the components custom `<ThemeProvider>` and supplying the following theme: 
 
 ```javascript
- const theme = {
-    checkedBg: '#19AB27',
-    checkedBgHover: '#128D15',
-    notCheckedBg: '#4D4D4D',
-    notCheckedBgHover: '#000000',
-    checkedBorder: '#19AB27',
-    notCheckedBorder: '#4D4D4D',
-    thumbBg: '#FAFAFA',
+  import Toggle, { ThemeProvider }
+  ...
+  const theme = {
+      checkedBg: '#19AB27',
+      checkedBgHover: '#128D15',
+      notCheckedBg: '#4D4D4D',
+      notCheckedBgHover: '#000000',
+      checkedBorder: '#19AB27',
+      notCheckedBorder: '#4D4D4D',
+      thumbBg: '#FAFAFA',
   }
 ```
 

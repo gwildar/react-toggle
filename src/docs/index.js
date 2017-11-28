@@ -1,11 +1,21 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-import Toggle from '../component'
+import Toggle, { ThemeProvider } from '../component'
 // In your code this would be:
 // import Toggle from 'react-toggle'
 
 import './style.css'
+
+const theme = {
+  checkedBg: '#f00',
+  checkedBgHover: '#128D15',
+  notCheckedBg: '#0f0',
+  notCheckedBgHover: '#000000',
+  checkedBorder: '#19AB27',
+  notCheckedBorder: '#4D4D4D',
+  thumbBg: '#FAFAFA',
+}
 
 const Heart = () => (
   <div style={{
@@ -72,6 +82,33 @@ class App extends Component {
           <p>Or if you're not using the ES6 module format yet:</p>
           <pre>{`var Toggle = require('react-toggle')`}</pre>
           <p>Include the component's <a href='https://raw.githubusercontent.com/instructure-react/react-toggle/master/style.css'>CSS</a>.</p>
+        </div>
+
+        {/* Custom Theme */}
+
+        <div className='example'>
+          <label>
+            <ThemeProvider theme={theme}>
+              <Toggle
+                defaultChecked={this.state.baconIsReady}
+                onChange={this.handleBaconChange} />
+            </ThemeProvider>
+            <span className='label-text'>Wrapper label tag</span>
+          </label>
+
+          <pre>
+            {`<ThemeProvider theme={theme}>
+            <label>
+  <Toggle
+    defaultChecked={this.state.baconIsReady}
+    onChange={this.handleBaconChange} />
+  <span>Wrapper label tag</span>
+</label>
+</ThemeProvider>`}
+          </pre>
+          <pre>
+            this.state.baconIsReady: {JSON.stringify(this.state.baconIsReady)}
+          </pre>
         </div>
 
         {/* Bacon */}
